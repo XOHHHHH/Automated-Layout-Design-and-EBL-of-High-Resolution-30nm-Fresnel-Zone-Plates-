@@ -1,0 +1,277 @@
+;//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+;	JBX-6300FS Mask Writing Exposure Performance Test for 100kv-5th
+;	Coating		PMMA-D	1500rpmx2(18000 nm)  
+;	Baking		180`C /2hrs (oven)
+;	Developer	O-XYLENE 60 sec  @23.0`C
+;	Rinse		IPA		30sec  @Room temperature  
+;	Exposure Time	1st =  hour   min    2nd =  hour   min
+;//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+;
+ JOB/W     ,3 			             ; 3 Inch Wafer
+   				                     ;   
+ PATH      MASK16				     ; Auto Calib Menu File (calib.men)
+ 					             ; Initial Check (HEIMAP,CURRNT,INITBE,PDEFBE,SUBDEFBE) 
+ 					             ; Cycle Check   (CURRNT,DRIFT 16Chip)   
+                                                     ;
+           ARRAY  (-500,4,200)/(-500,4,200)        ; Mask Writing Pattern
+           ASSIGN P(1) -> ((1,1),SHOT1)
+           ASSIGN P(2) -> ((2,1),SHOT1)                ; X = 1 , Y = 1  Total 15 Chip
+           ASSIGN P(3) -> ((1,2),SHOT1)
+           ASSIGN P(4) -> ((2,2),SHOT1)
+           ASSIGN P(5) -> ((3,2),SHOT1)                ; X = 1 , Y = 1  Total 15 Chip
+           ASSIGN P(6) -> ((4,2),SHOT1)                ; X = 1 , Y = 1  Total 15 Chip
+           ASSIGN P(7) -> ((1,3),SHOT1)                ; X = 1 , Y = 1  Total 15 Chip
+           ASSIGN P(8) -> ((2,3),SHOT1)                ; X = 1 , Y = 1  Total 15 Chip
+           ASSIGN P(9) -> ((3,3),SHOT1)                ; X = 1 , Y = 1  Total 15 Chip
+          ASSIGN P(10) -> ((4,3),SHOT1)                ; X = 1 , Y = 1  Total 15 Chip
+           ASSIGN P(11) -> ((1,4),SHOT1)                ; X = 1 , Y = 1  Total 15 Chip
+           ASSIGN P(12) -> ((2,4),SHOT1)                ; X = 1 , Y = 1  Total 15 Chip
+           ASSIGN P(13) -> ((3,4),SHOT1)                ; X = 1 , Y = 1  Total 15 Chip
+          ASSIGN P(14) -> ((4,4),SHOT1)                ; X = 1 , Y = 1  Total 15 Chip
+   		
+ PEND                                                ;
+;                                                    ;
+;----------------------------------------------------;
+;	   Layer1 Definition                         ;
+;----------------------------------------------------;
+ LAYER     1				             ;
+ P(1)	   'Drawing3.v30'     	                     ; Mode 6 Mask Writing Pattern(5*3Field)
+ EOS	   6,'FUDAN_EOS6_500pA'			     ; Mode , Condition Name  for 100kv 5th LENS
+ SHOT	   A,40			                     ; Shot Time (Auto) , Np (Point) = Shot pitch(40 * 0.125nm=5nm)
+ RESTYP	   POSI,'UV5'		                     ; UV5 150 nm
+ RESIST    500,1000			             ; Area dose(uC/cm^2) , Line Dose(uC/cm^2)
+ OBJAPT    4				             ; 1=0um 2=2000um 3,4=25um 5,6=60um 7=130um 8=300um
+ STDCUR	   0.5			                     ; Ip(nA) = 0.1nA 
+ SHOT1:   MODULAT (( 0, -7.7 ) , ( 1, -6.7 ) , ( 2, -5.8 )
+-     , ( 3, -4.8 ) , ( 4, -3.9 ) , ( 5, -2.9 )
+-     , ( 6, -2.0 ) , ( 7, -1.0 ) , ( 8,  0.0 )
+-     , ( 9,  1.0 ) , ( 10,  2.0 ) , ( 11,  3.0 )
+-     , ( 12,  4.1 ))
+
+
+;                                                                                                       ;
+;----------------------------------------------------;
+;	   Layer2 Definition                         ;
+;----------------------------------------------------;
+ LAYER     2				             ;
+ P(2)	   'Drawing3.v30'     	                     ; Mode 6 Mask Writing Pattern(5*3Field)
+ EOS	   6,'FUDAN_EOS6_500pA'			     ; Mode , Condition Name  for 100kv 5th LENS
+ SHOT	   A,40			                     ; Shot Time (Auto) , Np (Point) = Shot pitch(40 * 0.125nm=5nm)
+ RESTYP	   POSI,'UV5'		                     ; UV5 150 nm
+ RESIST    700,1000			             ; Area dose(uC/cm^2) , Line Dose(uC/cm^2)
+ OBJAPT    4				             ; 1=0um 2=2000um 3,4=25um 5,6=60um 7=130um 8=300um
+ STDCUR	   0.5			                     ; Ip(nA) = 0.1nA 
+ SHOT1:   MODULAT (( 0, -7.7 ) , ( 1, -6.7 ) , ( 2, -5.8 )
+-     , ( 3, -4.8 ) , ( 4, -3.9 ) , ( 5, -2.9 )
+-     , ( 6, -2.0 ) , ( 7, -1.0 ) , ( 8,  0.0 )
+-     , ( 9,  1.0 ) , ( 10,  2.0 ) , ( 11,  3.0 )
+-     , ( 12,  4.1 ))
+
+
+
+;                 
+
+ LAYER     3				             ;
+ P(3)	   'Drawing3.v30'     	                     ; Mode 6 Mask Writing Pattern(5*3Field)
+ EOS	   6,'FUDAN_EOS6_500pA'			     ; Mode , Condition Name  for 100kv 5th LENS
+ SHOT	   A,40			                     ; Shot Time (Auto) , Np (Point) = Shot pitch(40 * 0.125nm=5nm)
+ RESTYP	   POSI,'UV5'		                     ; UV5 150 nm
+ RESIST    900,1000			             ; Area dose(uC/cm^2) , Line Dose(uC/cm^2)
+ OBJAPT    4				             ; 1=0um 2=2000um 3,4=25um 5,6=60um 7=130um 8=300um
+ STDCUR	   0.5			                     ; Ip(nA) = 0.1nA 
+ SHOT1: MODULAT (( 0, -7.7 ) , ( 1, -6.7 ) , ( 2, -5.8 )
+-     , ( 3, -4.8 ) , ( 4, -3.9 ) , ( 5, -2.9 )
+-     , ( 6, -2.0 ) , ( 7, -1.0 ) , ( 8,  0.0 )
+-     , ( 9,  1.0 ) , ( 10,  2.0 ) , ( 11,  3.0 )
+-     , ( 12,  4.1 ))
+
+
+
+
+;
+
+ LAYER     4				             ;
+ P(4)	   'Drawing3.v30'     	                     ; Mode 6 Mask Writing Pattern(5*3Field)
+ EOS	   6,'FUDAN_EOS6_500pA'			     ; Mode , Condition Name  for 100kv 5th LENS
+ SHOT	   A,40			                     ; Shot Time (Auto) , Np (Point) = Shot pitch(40 * 0.125nm=5nm)
+ RESTYP	   POSI,'UV5'		                     ; UV5 150 nm
+ RESIST    1100,1000			             ; Area dose(uC/cm^2) , Line Dose(uC/cm^2)
+ OBJAPT    4				             ; 1=0um 2=2000um 3,4=25um 5,6=60um 7=130um 8=300um
+ STDCUR	   0.5			                     ; Ip(nA) = 0.1nA 
+ SHOT1:   MODULAT (( 0, -7.7 ) , ( 1, -6.7 ) , ( 2, -5.8 )
+-     , ( 3, -4.8 ) , ( 4, -3.9 ) , ( 5, -2.9 )
+-     , ( 6, -2.0 ) , ( 7, -1.0 ) , ( 8,  0.0 )
+-     , ( 9,  1.0 ) , ( 10,  2.0 ) , ( 11,  3.0 )
+-     , ( 12,  4.1 ))
+
+
+
+;
+ LAYER     5				             ;
+ P(5)	   'Drawing3.v30'     	                     ; Mode 6 Mask Writing Pattern(5*3Field)
+ EOS	   6,'FUDAN_EOS6_500pA'			     ; Mode , Condition Name  for 100kv 5th LENS
+ SHOT	   A,40			                     ; Shot Time (Auto) , Np (Point) = Shot pitch(40 * 0.125nm=5nm)
+ RESTYP	   POSI,'UV5'		                     ; UV5 150 nm
+ RESIST    1300,1000			             ; Area dose(uC/cm^2) , Line Dose(uC/cm^2)
+ OBJAPT    4				             ; 1=0um 2=2000um 3,4=25um 5,6=60um 7=130um 8=300um
+ STDCUR	   0.5			                     ; Ip(nA) = 0.1nA 
+ SHOT1: MODULAT (( 0, -7.7 ) , ( 1, -6.7 ) , ( 2, -5.8 )
+-     , ( 3, -4.8 ) , ( 4, -3.9 ) , ( 5, -2.9 )
+-     , ( 6, -2.0 ) , ( 7, -1.0 ) , ( 8,  0.0 )
+-     , ( 9,  1.0 ) , ( 10,  2.0 ) , ( 11,  3.0 )
+-     , ( 12,  4.1 ))
+
+
+
+;
+
+ LAYER     6				             ;
+ P(6)	   'Drawing3.v30'     	                     ; Mode 6 Mask Writing Pattern(5*3Field)
+ EOS	   6,'FUDAN_EOS6_500pA'			     ; Mode , Condition Name  for 100kv 5th LENS
+ SHOT	   A,40			                     ; Shot Time (Auto) , Np (Point) = Shot pitch(40 * 0.125nm=5nm)
+ RESTYP	   POSI,'UV5'		                     ; UV5 150 nm
+ RESIST    1500,1000			             ; Area dose(uC/cm^2) , Line Dose(uC/cm^2)
+ OBJAPT    4				             ; 1=0um 2=2000um 3,4=25um 5,6=60um 7=130um 8=300um
+ STDCUR	   0.5			                     ; Ip(nA) = 0.1nA 
+ SHOT1:MODULAT (( 0, -7.7 ) , ( 1, -6.7 ) , ( 2, -5.8 )
+-     , ( 3, -4.8 ) , ( 4, -3.9 ) , ( 5, -2.9 )
+-     , ( 6, -2.0 ) , ( 7, -1.0 ) , ( 8,  0.0 )
+-     , ( 9,  1.0 ) , ( 10,  2.0 ) , ( 11,  3.0 )
+-     , ( 12,  4.1 ))
+
+;
+
+ LAYER     7				             ;
+ P(7)	   'Drawing3.v30'     	                     ; Mode 6 Mask Writing Pattern(5*3Field)
+ EOS	   6,'FUDAN_EOS6_500pA'			     ; Mode , Condition Name  for 100kv 5th LENS
+ SHOT	   A,40			                     ; Shot Time (Auto) , Np (Point) = Shot pitch(40 * 0.125nm=5nm)
+ RESTYP	   POSI,'UV5'		                     ; UV5 150 nm
+ RESIST   1800,1000			             ; Area dose(uC/cm^2) , Line Dose(uC/cm^2)
+ OBJAPT    4				             ; 1=0um 2=2000um 3,4=25um 5,6=60um 7=130um 8=300um
+ STDCUR	   0.5			                     ; Ip(nA) = 0.1nA 
+ SHOT1:  MODULAT (( 0, -7.7 ) , ( 1, -6.7 ) , ( 2, -5.8 )
+-     , ( 3, -4.8 ) , ( 4, -3.9 ) , ( 5, -2.9 )
+-     , ( 6, -2.0 ) , ( 7, -1.0 ) , ( 8,  0.0 )
+-     , ( 9,  1.0 ) , ( 10,  2.0 ) , ( 11,  3.0 )
+-     , ( 12,  4.1 ))
+
+
+
+;
+
+ LAYER     8				             ;
+ P(8)	   'Drawing3.v30'     	                     ; Mode 6 Mask Writing Pattern(5*3Field)
+ EOS	   6,'FUDAN_EOS6_500pA'			     ; Mode , Condition Name  for 100kv 5th LENS
+ SHOT	   A,40			                     ; Shot Time (Auto) , Np (Point) = Shot pitch(40 * 0.125nm=5nm)
+ RESTYP	   POSI,'UV5'		                     ; UV5 150 nm
+ RESIST    2000,1000			             ; Area dose(uC/cm^2) , Line Dose(uC/cm^2)
+ OBJAPT    4				             ; 1=0um 2=2000um 3,4=25um 5,6=60um 7=130um 8=300um
+ STDCUR	   0.5			                     ; Ip(nA) = 0.1nA 
+ SHOT1: MODULAT (( 0, -7.7 ) , ( 1, -6.7 ) , ( 2, -5.8 )
+-     , ( 3, -4.8 ) , ( 4, -3.9 ) , ( 5, -2.9 )
+-     , ( 6, -2.0 ) , ( 7, -1.0 ) , ( 8,  0.0 )
+-     , ( 9,  1.0 ) , ( 10,  2.0 ) , ( 11,  3.0 )
+-     , ( 12,  4.1 ))
+
+;
+
+ LAYER     9				             ;
+ P(9)	   'Drawing3.v30'     	                     ; Mode 6 Mask Writing Pattern(5*3Field)
+ EOS	   6,'FUDAN_EOS6_500pA'			     ; Mode , Condition Name  for 100kv 5th LENS
+ SHOT	   A,40			                     ; Shot Time (Auto) , Np (Point) = Shot pitch(40 * 0.125nm=5nm)
+ RESTYP	   POSI,'UV5'		                     ; UV5 150 nm
+ RESIST    2200,1000			             ; Area dose(uC/cm^2) , Line Dose(uC/cm^2)
+ OBJAPT    4				             ; 1=0um 2=2000um 3,4=25um 5,6=60um 7=130um 8=300um
+ STDCUR	   0.5			                     ; Ip(nA) = 0.1nA 
+ SHOT1:  MODULAT (( 0, -7.7 ) , ( 1, -6.7 ) , ( 2, -5.8 )
+-     , ( 3, -4.8 ) , ( 4, -3.9 ) , ( 5, -2.9 )
+-     , ( 6, -2.0 ) , ( 7, -1.0 ) , ( 8,  0.0 )
+-     , ( 9,  1.0 ) , ( 10,  2.0 ) , ( 11,  3.0 )
+-     , ( 12,  4.1 ))
+
+
+;
+LAYER     10				             ;
+ P(10)	   'Drawing3.v30'     	                     ; Mode 6 Mask Writing Pattern(5*3Field)
+ EOS	   6,'FUDAN_EOS6_500pA'			     ; Mode , Condition Name  for 100kv 5th LENS
+ SHOT	   A,40			                     ; Shot Time (Auto) , Np (Point) = Shot pitch(40 * 0.125nm=5nm)
+ RESTYP	   POSI,'UV5'		                     ; UV5 150 nm
+ RESIST    2400,1000			             ; Area dose(uC/cm^2) , Line Dose(uC/cm^2)
+ OBJAPT    4				             ; 1=0um 2=2000um 3,4=25um 5,6=60um 7=130um 8=300um
+ STDCUR	   0.5			                     ; Ip(nA) = 0.1nA 
+ SHOT1:  MODULAT (( 0, -7.7 ) , ( 1, -6.7 ) , ( 2, -5.8 )
+-     , ( 3, -4.8 ) , ( 4, -3.9 ) , ( 5, -2.9 )
+-     , ( 6, -2.0 ) , ( 7, -1.0 ) , ( 8,  0.0 )
+-     , ( 9,  1.0 ) , ( 10,  2.0 ) , ( 11,  3.0 )
+-     , ( 12,  4.1 ))
+
+
+;
+LAYER     11				             ;
+ P(11)	   'Drawing3.v30'     	                     ; Mode 6 Mask Writing Pattern(5*3Field)
+ EOS	   6,'FUDAN_EOS6_500pA'			     ; Mode , Condition Name  for 100kv 5th LENS
+ SHOT	   A,40			                     ; Shot Time (Auto) , Np (Point) = Shot pitch(40 * 0.125nm=5nm)
+ RESTYP	   POSI,'UV5'		                     ; UV5 150 nm
+ RESIST   1600,1000			             ; Area dose(uC/cm^2) , Line Dose(uC/cm^2)
+ OBJAPT    4				             ; 1=0um 2=2000um 3,4=25um 5,6=60um 7=130um 8=300um
+ STDCUR	   0.5			                     ; Ip(nA) = 0.1nA 
+ SHOT1:  MODULAT (( 0, -7.7 ) , ( 1, -6.7 ) , ( 2, -5.8 )
+-     , ( 3, -4.8 ) , ( 4, -3.9 ) , ( 5, -2.9 )
+-     , ( 6, -2.0 ) , ( 7, -1.0 ) , ( 8,  0.0 )
+-     , ( 9,  1.0 ) , ( 10,  2.0 ) , ( 11,  3.0 )
+-     , ( 12,  4.1 ))
+
+
+
+
+;
+
+ LAYER     12				             ;
+ P(12)	   'Drawing3.v30'     	                     ; Mode 6 Mask Writing Pattern(5*3Field)
+ EOS	   6,'FUDAN_EOS6_500pA'			     ; Mode , Condition Name  for 100kv 5th LENS
+ SHOT	   A,40			                     ; Shot Time (Auto) , Np (Point) = Shot pitch(40 * 0.125nm=5nm)
+ RESTYP	   POSI,'UV5'		                     ; UV5 150 nm
+ RESIST    2800,1000			             ; Area dose(uC/cm^2) , Line Dose(uC/cm^2)
+ OBJAPT    4				             ; 1=0um 2=2000um 3,4=25um 5,6=60um 7=130um 8=300um
+ STDCUR	   0.5			                     ; Ip(nA) = 0.1nA 
+ SHOT1:  MODULAT (( 0, -7.7 ) , ( 1, -6.7 ) , ( 2, -5.8 )
+-     , ( 3, -4.8 ) , ( 4, -3.9 ) , ( 5, -2.9 )
+-     , ( 6, -2.0 ) , ( 7, -1.0 ) , ( 8,  0.0 )
+-     , ( 9,  1.0 ) , ( 10,  2.0 ) , ( 11,  3.0 )
+-     , ( 12,  4.1 ))
+
+
+;
+
+ LAYER     13				             ;
+ P(13)	   'Drawing3.v30'     	                     ; Mode 6 Mask Writing Pattern(5*3Field)
+ EOS	   6,'FUDAN_EOS6_500pA'			     ; Mode , Condition Name  for 100kv 5th LENS
+ SHOT	   A,40			                     ; Shot Time (Auto) , Np (Point) = Shot pitch(40 * 0.125nm=5nm)
+ RESTYP	   POSI,'UV5'		                     ; UV5 150 nm
+ RESIST    3000,1000			             ; Area dose(uC/cm^2) , Line Dose(uC/cm^2)
+ OBJAPT    4				             ; 1=0um 2=2000um 3,4=25um 5,6=60um 7=130um 8=300um
+ STDCUR	   0.5			                     ; Ip(nA) = 0.1nA 
+ SHOT1:  MODULAT (( 0, -7.7 ) , ( 1, -6.7 ) , ( 2, -5.8 )
+-     , ( 3, -4.8 ) , ( 4, -3.9 ) , ( 5, -2.9 )
+-     , ( 6, -2.0 ) , ( 7, -1.0 ) , ( 8,  0.0 )
+-     , ( 9,  1.0 ) , ( 10,  2.0 ) , ( 11,  3.0 )
+-     , ( 12,  4.1 ))
+
+
+;
+LAYER     14				             ;
+ P(14)	   'Drawing3.v30'     	                     ; Mode 6 Mask Writing Pattern(5*3Field)
+ EOS	   6,'FUDAN_EOS6_500pA'			     ; Mode , Condition Name  for 100kv 5th LENS
+ SHOT	   A,40			                     ; Shot Time (Auto) , Np (Point) = Shot pitch(40 * 0.125nm=5nm)
+ RESTYP	   POSI,'UV5'		                     ; UV5 150 nm
+ RESIST    3200,1000			             ; Area dose(uC/cm^2) , Line Dose(uC/cm^2)
+ OBJAPT    4				             ; 1=0um 2=2000um 3,4=25um 5,6=60um 7=130um 8=300um
+ STDCUR	   0.5			                     ; Ip(nA) = 0.1nA 
+ SHOT1:  MODULAT (( 0, -7.7 ) , ( 1, -6.7 ) , ( 2, -5.8 )
+-     , ( 3, -4.8 ) , ( 4, -3.9 ) , ( 5, -2.9 )
+-     , ( 6, -2.0 ) , ( 7, -1.0 ) , ( 8,  0.0 )
+-     , ( 9,  1.0 ) , ( 10,  2.0 ) , ( 11,  3.0 )
+-     , ( 12,  4.1 ))
+
+
+END

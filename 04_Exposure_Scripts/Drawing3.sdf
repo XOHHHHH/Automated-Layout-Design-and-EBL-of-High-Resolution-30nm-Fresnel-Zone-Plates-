@@ -1,0 +1,81 @@
+MAGAZIN	  ' '		     ; Magazin Name for 62.5um Mask Exposure  
+; 	                     ;
+; === MASK Exposure ===      ;
+
+
+
+#1                           ; Auto Loader Position Number.(#1-10) 
+%3E                          ; 3inch * 2  Multi Holder  Top position
+JDF      'Drawing3',1            ; Job Deck File Name , Layer Nubmer(1st) 
+EOS	  6,'FUDAN_EOS6_500pA'	     ; Mode , Condition Name  for 100kv 5th LENS				
+
+#1                           ; Auto Loader Position Number.(#1-10) 
+%3E                          ; 3inch * 2  Multi Holder  Top position
+JDF      'Drawing3',2            ; Job Deck File Name , Layer Nubmer(1st) 
+EOS	  6,'FUDAN_EOS6_500pA'	     ; Mode , Condition Name  for 100kv 5th LENS
+
+#1                           ; Auto Loader Position Number.(#1-10) 
+%3E                          ; 3inch * 2  Multi Holder  Top position
+JDF      'Drawing3',3            ; Job Deck File Name , Layer Nubmer(1st) 
+EOS	  6,'FUDAN_EOS6_500pA'	     ; Mode , Condition Name  for 100kv 5th LENS
+
+#1                           ; Auto Loader Position Number.(#1-10) 
+%3E                          ; 3inch * 2  Multi Holder  Top position
+JDF      'Drawing3',4            ; Job Deck File Name , Layer Nubmer(1st) 
+EOS	  6,'FUDAN_EOS6_500pA'	     ; Mode , Condition Name  for 100kv 5th LENS			
+
+#1                           ; Auto Loader Position Number.(#1-10) 
+%3E                          ; 3inch * 2  Multi Holder  Top position
+JDF      'Drawing3',5            ; Job Deck File Name , Layer Nubmer(1st) 
+EOS	  6,'FUDAN_EOS6_500pA'	     ; Mode , Condition Name  for 100kv 5th LENS	
+
+#1                           ; Auto Loader Position Number.(#1-10) 
+%3E                          ; 3inch * 2  Multi Holder  Top position
+JDF      'Drawing3',6            ; Job Deck File Name , Layer Nubmer(1st) 
+EOS	  6,'FUDAN_EOS6_500pA'	     ; Mode , Condition Name  for 100kv 5th LENS	
+
+#1                           ; Auto Loader Position Number.(#1-10) 
+%3E                          ; 3inch * 2  Multi Holder  Top position
+JDF      'Drawing3',7            ; Job Deck File Name , Layer Nubmer(1st) 
+EOS	  6,'FUDAN_EOS6_500pA'	     ; Mode , Condition Name  for 100kv 5th LENS
+
+#1                           ; Auto Loader Position Number.(#1-10) 
+%3E                          ; 3inch * 2  Multi Holder  Top position
+JDF      'Drawing3',8            ; Job Deck File Name , Layer Nubmer(1st) 
+EOS	  6,'FUDAN_EOS6_500pA'	     ; Mode , Condition Name  for 100kv 5th LENS
+
+#1                           ; Auto Loader Position Number.(#1-10) 
+%3E                          ; 3inch * 2  Multi Holder  Top position
+JDF      'Drawing3',9            ; Job Deck File Name , Layer Nubmer(1st) 
+EOS	  6,'FUDAN_EOS6_500pA'	     ; Mode , Condition Name  for 100kv 5th LENS
+
+#1                           ; Auto Loader Position Number.(#1-10) 
+%3E                          ; 3inch * 2  Multi Holder  Top position
+JDF      'Drawing3',10            ; Job Deck File Name , Layer Nubmer(1st) 
+EOS	  6,'FUDAN_EOS6_500pA'	     ; Mode , Condition Name  for 100kv 5th LENS
+
+#1                           ; Auto Loader Position Number.(#1-10) 
+%3E                          ; 3inch * 2  Multi Holder  Top position
+JDF      'Drawing3',11            ; Job Deck File Name , Layer Nubmer(1st) 
+EOS	  6,'FUDAN_EOS6_500pA'	     ; Mode , Condition Name  for 100kv 5th LENS
+
+#1                           ; Auto Loader Position Number.(#1-10) 
+%3E                          ; 3inch * 2  Multi Holder  Top position
+JDF      'Drawing3',12            ; Job Deck File Name , Layer Nubmer(1st) 
+EOS	  6,'FUDAN_EOS6_500pA'	     ; Mode , Condition Name  for 100kv 5th LENS
+
+#1                           ; Auto Loader Position Number.(#1-10) 
+%3E                          ; 3inch * 2  Multi Holder  Top position
+JDF      'Drawing3',13            ; Job Deck File Name , Layer Nubmer(1st) 
+EOS	  6,'FUDAN_EOS6_500pA'	     ; Mode , Condition Name  for 100kv 5th LENS
+
+#1                           ; Auto Loader Position Number.(#1-10) 
+%3E                          ; 3inch * 2  Multi Holder  Top position
+JDF      'Drawing3',14            ; Job Deck File Name , Layer Nubmer(1st) 
+EOS	  6,'FUDAN_EOS6_500pA'	     ; Mode , Condition Name  for 100kv 5th LENS
+
+
+
+
+
+END                       ; On Stage Holder Position Number (1-10)
