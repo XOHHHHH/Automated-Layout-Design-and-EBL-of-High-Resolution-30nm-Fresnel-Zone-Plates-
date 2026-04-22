@@ -32,10 +32,6 @@
 
 通过 SEM 扫描电镜观察，30nm 最外圈线条清晰、完整，未见明显倒塌或粘连。支撑筋与波带片圆环交接处 Heal 处理良好。
 
-<p align="center">
-  <img src="images/sem_overview.png" width="400" title="FZP Overview">
-  <img src="images/sem_outer_zone.png" width="400" title="30nm Outer Zones">
-</p>
 
 ## 4. Directory Structure
 - `01_CAD_Design/`: `.scr` 生成脚本及 `.dxf` 最终版图
